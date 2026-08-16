@@ -12,7 +12,7 @@ python-multipart
 docx2txt
 unstructured[pptx]
 GitPython
-unstructured[all-docs]
+unstructured
 pillow
 langfuse
 langfuse-langchain
