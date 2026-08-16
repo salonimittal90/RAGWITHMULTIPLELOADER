@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Multi Loader</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">FastAPI + RAG Workspace</p>
+          <h1>RAG Multi Loader</h1>
+          <p class="subtitle">
+            Load documents, Aask questions, and review recent sessions from one simple dashboard.
+          </p>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2>Load content</h2>
+        <form id="url-form" class="stack">
+          <label>
+            Source URL
+            <input type="url" id="source-url" name="source" placeholder="https://example.com" required />
+          </label>
+          <label>
+            Source type
+            <select id="source-type" name="source_type">
+              <option value="web">Web</option>
+              <option value="github">GitHub</option>
+              <option value="file">File</option>
+            </select>
+          </label>
+          <button type="submit">Load from URL</button>
+        </form>
+
+        <form id="file-form" class="stack">
+          <label>
+            Upload file
+            <input type="file" id="document-file" name="file" required />
+          </label>
+          <button type="submit">Upload and index</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Ask a question</h2>
+        <form id="chat-form" class="stack">
+          <label>
+            Question
+            <textarea id="question" rows="4" placeholder="Ask anything about your indexed content" required></textarea>
+          </label>
+          <div class="inline-fields">
+            <label>
+              Thread ID
+              <input type="text" id="thread-id" placeholder="Optional session id" />
+            </label>
+            <label>
+              User email
+              <input type="email" id="user-email" placeholder="you@example.com" required />
+            </label>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+        <div id="status" class="status" aria-live="polite"></div>
+        <div id="chat-output" class="chat-output"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Recent Conversation</h2>
+          <button id="recent-btn" class="secondary">Refresh</button>
+        </div>
+        <div id="threads-output" class="threads-output"></div>
+      </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

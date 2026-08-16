@@ -1,0 +1,148 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #07111f;
+  color: #f3f7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #07111f 0%, #10223f 100%);
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+.hero {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.8rem;
+  color: #7dd3fc;
+  margin-bottom: 8px;
+}
+
+h1,
+h2 {
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #cbd5e1;
+  max-width: 720px;
+}
+
+.card {
+  background: rgba(7, 17, 31, 0.82);
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 20px 45px rgba(2, 8, 23, 0.25);
+}
+
+.stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.inline-fields {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  padding: 10px 12px;
+}
+
+input,
+select,
+textarea {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  border: none;
+  font-weight: 700;
+}
+
+button.secondary {
+  background: #1f2937;
+  border: 1px solid #334155;
+}
+
+.status {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #cbd5e1;
+  min-height: 44px;
+}
+
+.status.success {
+  color: #bbf7d0;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.status.error {
+  color: #fecaca;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.chat-output,
+.threads-output {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.chat-bubble,
+.thread-item {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
